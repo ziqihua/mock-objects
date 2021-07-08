@@ -76,4 +76,14 @@ public class FindClassmatesTest {
         assertNull(response);
 
     }
+
+    @Test
+    public void testClassesDataSourceReturnsNullForInputStudent() { 
+    
+        ff = new FriendFinder(defaultClassesDataSource, defaultStudentsDataSource);
+        Set<String> response = ff.findClassmates(new Student("D", "D"));
+        assertNull(response);
+
+    }
+
 }
